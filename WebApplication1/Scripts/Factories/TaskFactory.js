@@ -14,10 +14,25 @@
     let deleteTask = (userTaskId) => {
         return $q((resolve, reject) => {
             $http.delete(`${API_URL}/${userTaskId}`)
-            .success(() => {
-                resolve();
+            .success((result) => {
+                resolve(result);
+            })
+            .error((error) => {
+                reject(error);
             });
         });
     };
-    return {getTasks, deleteTask} 
+
+    let postNewTask = (newTask) =>{
+        return $q( (resolve, reject) => {
+            $http.post(`${API_URL}`, newTask)
+                .success((result) => {
+                    resolve(result); //
+                })
+                .error((error) => {
+                    reject(error);
+                });
+        });
+    };
+    return {getTasks, deleteTask, postNewTask} 
 });
