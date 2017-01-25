@@ -10,5 +10,14 @@
             });
         })
     }
-    return {getTasks} 
+
+    let deleteTask = (userTaskId) => {
+        return $q((resolve, reject) => {
+            $http.delete(`${API_URL}/${userTaskId}`)
+            .success(() => {
+                resolve();
+            });
+        });
+    };
+    return {getTasks, deleteTask} 
 });
