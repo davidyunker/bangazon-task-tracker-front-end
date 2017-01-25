@@ -115,10 +115,18 @@
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\app.js" />
+    <Content Include="Scripts\Controllers\TaskController.js" />
+    <Content Include="Scripts\Factories\TaskFactory.js" />
+    <Content Include="Scripts\Partials\NewTask.html" />
+    <Content Include="Scripts\Partials\TaskDetail.html" />
+    <Content Include="Scripts\Partials\UserTasks.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Scripts\App_LocalResources\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
