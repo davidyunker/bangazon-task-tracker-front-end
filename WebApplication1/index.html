@@ -4,10 +4,13 @@
     <title></title>
 	<meta charset="utf-8" />
 </head>
-<body>
+<body ng-app="BangazonToDo">
     <h1>Welcome to Bangazon!</h1>
-
-<script src="Scripts/angular-route.min.js"></script>
+    <div ng-view></div>
 <script src="Scripts/angular.min.js"></script>
+<script src="Scripts/angular-route.min.js"></script>
+<script src="Scripts/app.js"></script>
+<script src="Scripts/Factories/TaskFactory.js"></script>
+<script src="Scripts/Controllers/TaskController.js"></script>
 </body>
 </html>
