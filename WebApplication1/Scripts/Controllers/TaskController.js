@@ -1,8 +1,7 @@
-﻿app.controller("UserTaskCtrl", function ($scope, $location, TaskFactory) {
+﻿app.controller("UserTaskCtrl", function ($scope, $location, TaskFactory, $routeParams) {
 
     $scope.title = "Add New Task";
     $scope.btnText = "Save New Task";
-    //added to switch up the form when the route uses this controller as opposed to the edit controller
     $scope.newTask = {
         name: '',
         description: '',
@@ -32,6 +31,12 @@
             console.log(result);
         })
     }
+
+    $scope.editTask = (userTaskId) =>
+        TaskFactory.getSingleTask($routeParams.userTaskId)
+        .then((response) => {
+     $scope.selectedTask = response;
+ });
 });
 
         

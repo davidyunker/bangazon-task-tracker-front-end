@@ -17,18 +17,14 @@ app.config(function ($routeProvider) {
         //    templateUrl: 'Scripts/Partials/UserTasks.html',
         //    controller: "UserTaskCtrl"
         //}).
-        //when('/Tasks/:taskId', {
-        //    templateUrl: "Scripts/Partials/TaskDetail.html",
-        //    controller: "UserTaskCtrl"
-        //}).
+        when('/Tasks/:userTaskId', {
+            templateUrl: "Scripts/Partials/TaskDetail.html",
+            controller: "UserTaskCtrl"
+        }).
           when("/Tasks/New", {
               templateUrl: "Scripts/Partials/NewTask.html",
               controller: "UserTaskCtrl"
           }).
-        when("/Tasks/:taskId/edit", {
-            templateUrl: "Scripts/Partials/TaskDetail.html",
-            controller: "UserTaskCtrl"
-        }).
         otherwise("/");
 });
 
