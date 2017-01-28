@@ -34,5 +34,17 @@
                 });
         });
     };
-    return {getTasks, deleteTask, postNewTask} 
+
+    let getSingleTask = (userTaskId) => {
+        return $q((resolve, reject) => {
+            $http.get(`${API_URL}/${userTaskId}`)
+            .success((result) => {
+                resolve(result);
+            })
+            .error((error) => {
+                reject(error);
+            });
+        });
+    };
+    return {getTasks, deleteTask, postNewTask, getSingleTask} 
 });
