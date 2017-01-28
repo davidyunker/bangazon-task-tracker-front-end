@@ -24,6 +24,11 @@ app.config(function ($routeProvider) {
               templateUrl: "Scripts/Partials/NewTask.html",
               controller: "AddTaskCtrl"
           }).
+
+          when("/Tasks/ByStatus/:status", {
+              templateUrl: "Scripts/Partials/TasksByStatus.html",
+              controller: "StatusTaskCtrl"
+          }).
         otherwise("/");
 });
 

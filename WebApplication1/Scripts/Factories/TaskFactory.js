@@ -47,6 +47,17 @@
         });
     };
 
+    let getTasksByStatus = (status) => {
+        return $q((resolve, reject) => {
+            $http.get(`${API_URL}/ByStatus/${status}`)
+            .success((result) => {
+                resolve(result);
+            })
+            .error((error) => {
+                reject(error);
+            });
+        });
+    };
     let editTask = (userTaskId, userTask) => {
         return $q((resolve, reject) => {
             $http.put(`${API_URL}/${userTaskId}`, JSON.stringify(userTask))
@@ -59,5 +70,5 @@
             });
         });
     };
-    return {getTasks, deleteTask, postNewTask, getSingleTask, editTask} 
+    return { getTasks, deleteTask, postNewTask, getSingleTask, editTask, getTasksByStatus }
 });
