@@ -16,10 +16,10 @@ app.config(function ($routeProvider) {
               controller: "UserTaskCtrl"
           }).
       
-        //when('/Tasks/:userTaskId', {
-        //    templateUrl: "Scripts/Partials/TaskDetail.html",
-        //    controller: "UserTaskCtrl"
-        //}).
+        when('/Tasks/:userTaskId', {
+            templateUrl: "Scripts/Partials/TaskDetail.html",
+            controller: "TaskSingleCtrl"
+        }).
           when("/Tasks/New", {
               templateUrl: "Scripts/Partials/NewTask.html",
               controller: "AddTaskCtrl"
