@@ -12,13 +12,14 @@
                 <div class="panel-body">
                    
         <div ng-repeat="task in userTasks">
-                    <div class="col-xs-2">{{task.name}}</div>
-                    <div class="col-xs-1">{{task.description}}</div>
-                    <div class="col-xs-1">{{task.status}}</div>
+                    <div class="col-md-12"><h3>Task</h3></div>
+                    <div class="col-md-12">Name: {{task.name}}</div>
+                    <div class="col-md-12">Description: {{task.description}}</div>
+                    <div class="col-md-12">Status: {{task.status}}</div>
                    
-            <div class="col-xs-1"><button class="btn btn-danger" ng-click="taskDelete(task.userTaskId)">X</button></div>
+             <div class="col-md-12"><a ng-href="#/Tasks/{{task.userTaskId}}">Edit</a></div>      
+            <div class="col-md-12"><button class="btn btn-danger" ng-click="taskDelete(task.userTaskId)">X</button></div>
 
-             <a ng-href="#/Tasks/{{task.userTaskId}}">Edit</a>      
                 </div>
             </div>
         </div>
