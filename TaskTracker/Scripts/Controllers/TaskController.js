@@ -18,11 +18,7 @@
     };
 
  
- //   $scope.editTask = (userTaskId) =>
- //       TaskFactory.getSingleTask($routeParams.userTaskId)
- //       .then((response) => {
- //    $scope.selectedTask = response;
- //});
+ 
 });
 
         
