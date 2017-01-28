@@ -139,6 +139,7 @@
     <Content Include="Scripts\Controllers\TaskController.js" />
     <Content Include="Scripts\Controllers\TaskSingleController.js" />
     <Content Include="Scripts\Factories\TaskFactory.js" />
+    <Content Include="Scripts\Partials\Navbar.html" />
     <Content Include="Scripts\Partials\NewTask.html" />
     <Content Include="Scripts\Partials\TaskDetail.html" />
     <Content Include="Scripts\Partials\TasksByStatus.html" />

@@ -8,12 +8,12 @@
     <form>
     <h1>Task Detail</h1>
     <h2>Task Name: {{task.name}}</h2>
-    <input type="text" class="form-control" placeholder="task.description" ng-model="updatedTask.name" />
+    <input type="text" class="form-control" placeholder="task.description" ng-model="task.name" />
     <h2>Task Description:{{task.description}}</h2>
-    <input type="text" class="form-control" placeholder="task.description" ng-model="updatedTask.description" />
+    <input type="text" class="form-control" placeholder="task.description" ng-model="task.description" />
     <h2>Task Status: {{task.status}}</h2>
-    <input type="text" class="form-control" placeholder="task.description" ng-model="updatedTask.status" />
-    <br /><button ng-click="updateTask(updatedTask)">Edit Task</button>
+    <input type="text" class="form-control" placeholder="task.description" ng-model="task.status" />
+    <br /><button ng-click="updateTask(task)">Edit Task</button>
         </form>
 </body>
 </html>
