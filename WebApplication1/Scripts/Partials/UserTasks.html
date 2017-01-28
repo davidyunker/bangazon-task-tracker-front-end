@@ -14,9 +14,8 @@
         <div ng-repeat="task in userTasks">
                     <div class="col-xs-2">{{task.name}}</div>
                     <div class="col-xs-1">{{task.description}}</div>
-                    <div class="col-xs-1" ng-if="task.status === 0">To Do</div>
-                    <div class="col-xs-1" ng-if="task.status === 1">In Progress</div>
-                    <div class="col-xs-1" ng-if="task.status === 2">Completed</div>
+                    <div class="col-xs-1">{{task.status}}</div>
+                   
             <div class="col-xs-1"><button class="btn btn-danger" ng-click="taskDelete(task.userTaskId)">X</button></div>
 
              <a ng-href="#/Tasks/{{task.userTaskId}}">Edit</a>      
