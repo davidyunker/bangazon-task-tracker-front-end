@@ -24,7 +24,7 @@
                });
 
     $scope.taskDelete = (taskId) => {
-        TaskFactory.deleteTask(taskId)
+        TaskFactory.deleteTask(taskId).
         then((tasks) => {
             TaskFactory.getTasks()
                .then((tasks) => {
@@ -42,11 +42,14 @@
         TaskFactory.getTasksByStatus(x)
               .then((tasks) => {
                   console.log("tasks", tasks);
+                  tasks.forEach(function (task) {
+                      filterTasks(task)
+                      console.log('task in loop', task);
+                  })
                   $scope.userTasks = tasks;
               });
     };
 
-    $scope.test = function () { console.log("test worked") };
 });
 
         

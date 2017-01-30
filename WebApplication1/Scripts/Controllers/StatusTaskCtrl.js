@@ -1,12 +1,20 @@
 ﻿
 app.controller("StatusTaskCtrl", function ($scope, TaskFactory, $routeParams) {
 
-
-    //TaskFactory.getTasksByStatus("2")
-    //      .then((tasks) => {
-    //          console.log("tasks", tasks);
-    //          $scope.userTasks = tasks;
-    //      });
+    $scope.taskDelete = (taskId) => {
+        TaskFactory.deleteTask(taskId)
+        .then((tasks) => {
+            TaskFactory.getTasks()
+               .then((tasks) => {
+                   console.log("unfiltered tasks inside GET", tasks)
+                   tasks.forEach(function (task) {
+                       filterTasks(task)
+                       console.log('task in loop delete', task);
+                   })
+                   $scope.userTasks = tasks;
+               });
+        });
+    };
 
     $scope.updatedTask = {
         name: '',
