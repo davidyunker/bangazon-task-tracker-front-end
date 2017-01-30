@@ -2,11 +2,11 @@
 app.controller("StatusTaskCtrl", function ($scope, TaskFactory, $routeParams) {
 
 
-    TaskFactory.getTasksByStatus("2")
-          .then((tasks) => {
-              console.log("tasks", tasks);
-              $scope.userTasks = tasks;
-          });
+    //TaskFactory.getTasksByStatus("2")
+    //      .then((tasks) => {
+    //          console.log("tasks", tasks);
+    //          $scope.userTasks = tasks;
+    //      });
 
     $scope.updatedTask = {
         name: '',

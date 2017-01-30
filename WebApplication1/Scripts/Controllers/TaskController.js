@@ -37,6 +37,16 @@
                });
         });
     };
+
+    $scope.filterByStatus = function (x) {
+        TaskFactory.getTasksByStatus(x)
+              .then((tasks) => {
+                  console.log("tasks", tasks);
+                  $scope.userTasks = tasks;
+              });
+    };
+
+    $scope.test = function () { console.log("test worked") };
 });
 
         

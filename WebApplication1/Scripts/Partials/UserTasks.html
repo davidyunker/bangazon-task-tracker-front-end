@@ -6,8 +6,26 @@
 </head>
 <body>
          <h1>To-Do List</h1>
- 
-    <div class="row">
+        
+    <!--<select class="selectpicker" ng-click="filterByStatus('2')">
+        <option>Mustard</option>
+        <option>Ketchup</option>
+        <option>Relish</option>
+    </select>-->
+    <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Filter Tasks By Status
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a ng-click="filterByStatus('0')">To-Do</a></li>
+            <li><a a ng-click="filterByStatus('1')">In Progress</a></li>
+            <li><a ng-click="filterByStatus('2')">Completed</a></li>
+            
+        </ul>
+    </div>
+         
+  
             <div class="panel panel-default">
                 <div class="panel-body">
                    
